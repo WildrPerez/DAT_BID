@@ -1,0 +1,118 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}C:\Users\enriq\Dropbox\Task_BID\Code\DAT_project.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Jan 2022, 18:32:39
+{txt}
+{com}. 
+. ** Variable Path 
+. global user "C:\"
+{txt}
+{com}. 
+. * Setting working file 
+. 
+. cd "$user\Users\enriq\Dropbox\Consultoria BID"
+{err}unable to change to C:\\Users\enriq\Dropbox\Consultoria BID
+{txt}{search r(170), local:r(170);}
+
+end of do-file
+
+{search r(170), local:r(170);}
+
+{com}. do "C:\Users\enriq\AppData\Local\Temp\STD4dec_000000.tmp"
+{txt}
+{com}. cd "$user\Users\enriq\Dropbox\Task_BID"
+{res}C:\Users\enriq\Dropbox\Task_BID
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\enriq\AppData\Local\Temp\STD4dec_000000.tmp"
+{txt}
+{com}. 
+. global fuente "$user\Users\enriq\Dropbox\Task_BID"
+{txt}
+{com}. 
+. ** Fixed paths
+. global insumo "$fuente\Data"
+{txt}
+{com}. global code   "$fuente\Code"
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\enriq\AppData\Local\Temp\STD4dec_000000.tmp"
+{txt}
+{com}. 
+. ** Fixed paths
+. global input "$fuente\Data"
+{txt}
+{com}. global code   "$fuente\Code"
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. do "C:\Users\enriq\AppData\Local\Temp\STD4dec_000000.tmp"
+{txt}
+{com}. import excel "$input\Data for Analysis Test.xlsx", sheet("Sheet1") firstrow
+{res}{err}file C://Users/enriq/Dropbox/Task_BID/Data/Data for Analysis Test.xlsx not found
+{txt}{search r(601), local:r(601);}
+
+end of do-file
+
+{search r(601), local:r(601);}
+
+{com}. import excel "C:\Users\enriq\Dropbox\Task_BID\Data\Data for Analysis Test.xlsx", sheet("Sheet1") firstrow
+{res}{text}(10 vars, 7,021 obs)
+
+{com}. do "C:\Users\enriq\AppData\Local\Temp\STD4dec_000000.tmp"
+{txt}
+{com}. import excel "$input \ Data for Analysis Test.xlsx", sheet("Sheet1") firstrow
+{res}{err}file C://Users/enriq/Dropbox/Task_BID/Data / Data for Analysis Test.xlsx not found
+{txt}{search r(601), local:r(601);}
+
+end of do-file
+
+{search r(601), local:r(601);}
+
+{com}. do "C:\Users\enriq\AppData\Local\Temp\STD4dec_000000.tmp"
+{txt}
+{com}. import excel "input\Data for Analysis Test.xlsx", sheet("Sheet1") firstrow
+{res}{err}file input/Data for Analysis Test.xlsx not found
+{txt}{search r(601), local:r(601);}
+
+end of do-file
+
+{search r(601), local:r(601);}
+
+{com}. do "C:\Users\enriq\AppData\Local\Temp\STD4dec_000000.tmp"
+{txt}
+{com}. import excel "$input/Data for Analysis Test.xlsx", sheet("Sheet1") firstrow
+{res}{err}file C://Users/enriq/Dropbox/Task_BID/Data/Data for Analysis Test.xlsx not found
+{txt}{search r(601), local:r(601);}
+
+end of do-file
+
+{search r(601), local:r(601);}
+
+{com}. do "C:\Users\enriq\AppData\Local\Temp\STD4dec_000000.tmp"
+{txt}
+{com}. ********************************************************************************
+. ********************************************************************************
+. ***********************      Data Analysis Test    *****************************
+. ********************************************************************************
+. ********************************************************************************
+. ********************************************************************************
+. 
+. set more off
+{txt}
+{com}. clear all 
+{res}{txt}
+{com}. 
+. ********************       Data Cleaning    ************************************
+. *-------------------       Importing Data   ------------------------------------
+. 
+. cap log close
+{smcl}
+{com}{sf}{ul off}
